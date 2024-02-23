@@ -31,6 +31,7 @@ class Login_Page : AppCompatActivity() {
         button.setOnClickListener(){
            val intent = Intent(this,Rv_Home_Page ::class.java )
             startActivity(intent)
+            test
         }
 
 
