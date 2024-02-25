@@ -3,21 +3,17 @@ package com.gallardo.cyber_cartel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.os.Handler
 
-private lateinit var bb: Button
-
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bb = findViewById(R.id.mainbt)
-
-        bb.setOnClickListener() {
-            val intent = Intent(this, Login_Page::class.java)
+        Handler().postDelayed({val intent = Intent(this, Rv_Home_Page::class.java)
             startActivity(intent)
+            finish()}, 2000)
 
-        }
     }
 }
